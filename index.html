@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cute Gallery 💖</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="loginScreen" class="login-screen">
+  <h1>Welcome to the Cute Gallery 💖</h1>
+  <input type="text" id="usernameInput" placeholder="Enter your name" />
+  <button onclick="login()">Enter Gallery</button>
+</div>
+<div id="app" style="display: none;">
+  <header>
+    <h1 id="userTitle"></h1>
+    <div class="controls">
+      <input type="file" id="upload" multiple accept="image/*" />
+      <button onclick="createAlbum()">+ Album</button>
+      <select id="albumSelect" onchange="changeAlbum(this.value)"></select>
+      <select id="sortSelect" onchange="sortPhotos(this.value)">
+        <option value="date">Sort by Date</option>
+        <option value="name">Sort by Name</option>
+      </select>
+      <label class="music-label" for="musicUpload">🎵 Upload Music</label>
+      <input type="file" accept="audio/*" id="musicUpload" onchange="changeMusic(this)" style="display:none;" />
+      <span id="musicName" class="music-name"></span>
+      <button onclick="logout()">🔒 Logout</button>
+    </div>
+  </header>
+  <main>
+    <div id="gallery" class="gallery"></div>
+  </main>
+  <audio id="bgMusic" loop autoplay></audio>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

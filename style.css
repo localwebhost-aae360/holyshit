@@ -1,0 +1,54 @@
+
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', cursive;
+  background-color: #ffe4f0;
+  color: #5b004c;
+  text-align: center;
+}
+header {
+  background: #ffcce5;
+  padding: 10px;
+  border-bottom: 2px solid #ff99cc;
+}
+.controls {
+  margin-top: 10px;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+}
+.gallery .photo {
+  position: relative;
+  margin: 10px;
+}
+.gallery img {
+  width: 150px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+.gallery .caption {
+  font-size: 0.8rem;
+  margin-top: 4px;
+}
+.music-label {
+  background-color: #ffb6d5;
+  padding: 10px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px #ffa6c9;
+  display: inline-block;
+  margin-top: 5px;
+}
+.music-name {
+  display: block;
+  font-size: 0.85rem;
+  color: #a03366;
+  margin-top: 5px;
+}
+.login-screen {
+  padding: 50px;
+}
