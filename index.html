@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cute Gallery 💖</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="login-screen" class="screen">
+    <h1>💖 Welcome to Cute Gallery 💖</h1>
+    <input type="text" id="username" placeholder="Enter your username" />
+    <button onclick="login()">Enter</button>
+  </div>
+
+  <div id="gallery-app" class="screen hidden">
+    <header>
+      <h2 id="gallery-title"></h2>
+      <div class="toolbar">
+        <input type="file" id="photo-upload" accept="image/*" multiple hidden />
+        <button onclick="document.getElementById('photo-upload').click()">📷 Add Photos</button>
+        <button onclick="createAlbum()">📁 New Album</button>
+        <select id="album-selector" onchange="switchAlbum(this.value)"></select>
+        <button onclick="uploadMusic()">🎵 Set Music</button>
+        <button onclick="logout()">Logout</button>
+      </div>
+    </header>
+
+    <section id="albums-view"></section>
+    <main id="photo-gallery" class="gallery"></main>
+    <audio id="bg-music" loop autoplay></audio>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
